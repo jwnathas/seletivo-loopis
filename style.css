@@ -21,7 +21,7 @@ body {
     margin-left: 125px;
     align-items: left;
     text-align: center;
-    width: 25%;
+    width: 40%;
 }
 
 .main button {
@@ -47,7 +47,7 @@ body {
 .main h1 {
     text-align: center;
     color: white;
-    font-size: 55px;
+    font-size: 50px;
     margin-bottom: 1em;
 }
 
@@ -63,10 +63,10 @@ body {
     display: flex;
     align-items: flex-end;
     padding-left: 17rem;
-    padding-right: 0;
-    padding-bottom: 4rem;
+    padding-right: 10em;
+    padding-bottom: 2rem;
 }
 
 .image-people img {
-    width: 70%;
+    width: 100%;
 }
