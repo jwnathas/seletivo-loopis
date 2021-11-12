@@ -70,3 +70,36 @@ body {
 .image-people img {
     width: 100%;
 }
+
+.content {
+    align-items: center;
+    justify-content: center;
+}
+
+.main-to-do {
+    background-color: rgba(255, 255, 255, 0.514);
+    align-items: center;
+    width: 600px;
+    height: 550px;
+    border-radius: 8%;
+}
+
+.content h1 {
+    text-align: center;
+    color: white;
+    text-shadow: 1px 3px rgb(81, 54, 102) ;
+    font-size: 50px;
+}
+
+.input {
+    align-items: center;
+    text-align: left;
+    border-radius: 10px;
+    font-size: 20px;
+    display: flex;
+    margin: auto;
+    color: rgb(0, 0, 0);
+    font-family: "Poppins";
+    height: 8%;
+    width: 80%;
+}
