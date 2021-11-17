@@ -91,6 +91,15 @@ body {
     font-size: 50px;
 }
 
+.content a{
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
 .input {
     align-items: center;
     text-align: left;
@@ -98,8 +107,10 @@ body {
     font-size: 20px;
     display: flex;
     margin: auto;
+    padding-left: 20px;
     color: rgb(0, 0, 0);
     font-family: "Poppins";
     height: 8%;
     width: 80%;
+    outline: none;
 }
