@@ -77,12 +77,12 @@ body {
 }
 
 .main-to-do {
-    background-color: rgba(255, 255, 255, 0.514);
+    background-color: rgba(255, 255, 255, 0.61);
     align-items: center;
-    width: 600px;
-    height: 550px;
-    border-radius: 8%;
-    padding: 1.5em;
+    width: 800px;
+    height: auto;
+    border-radius: 3em;
+    padding: 2em;
 }
 
 .content h1 {
@@ -115,4 +115,50 @@ body {
     background-color: white;
     padding: 0.5em 0.5em 0.5em 0.8em;
     border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 2em;
+}
+
+.list li{
+    list-style: none;
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+    background: #f2f2f2;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0 15px;
+    border-radius: 10px;
+}
+
+.list li span{
+    position: absolute;
+    right: 0px;
+    color: rgb(199, 41, 41);
+    width: 45px;
+    text-align: center;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    padding-right: 0.5em;
+}
+
+.footer {
+    display: flex;
+    justify-content: end;
+    margin-right: 5px;
+    margin-top: 2em;
+}
+
+.footer button {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.footer img {
+    width: 35px;
+}
+
+.fa-edit {
+    color: black;
 }
