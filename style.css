@@ -117,14 +117,13 @@ body {
     padding: 0.5em 0.5em 0.5em 0.8em;
     border-radius: 10px;
     cursor: pointer;
-    margin-bottom: 2em;
+    margin-bottom: 10px;
 }
 
 .list{
     display: flex;
     width: 100%;
     flex-direction: column;
-    gap: 10px;
 }
 
 .list label{
@@ -147,12 +146,12 @@ body {
     cursor: pointer;
 }
 
-.item input[type='checkbox']:checked + div{
+.todoItem input[type='checkbox']:checked + div{
     text-decoration: line-through;
     color: rgb(83, 83, 83);
 }
 
-.item .text{
+.todoItem .text{
     padding-left: 1%;
     float: left;
 }

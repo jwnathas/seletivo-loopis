@@ -21,43 +21,24 @@
                 <img src="img/searchIcon.png">
             </div>
 
-            <div class="list">
-                <label class="item">
-                    <input type="checkbox">
-                    <div class="text">Comprar um notebook<button class="edit" onclick="showModalEdit()"><img
-                            src="img/edit-2.svg"></button> <button class="trash" onclick="showModalDel()"><img
-                            src="img/trash-2.svg"></button> </label></div>
-                </div>
-
-                <div class="list">
-                    <label class="item">
-                        <input type="checkbox">
-                        <div class="text">Comprar um notebook<button class="edit" onclick="showModalEdit()"><img
-                                src="img/edit-2.svg"></button> <button class="trash" onclick="showModalDel()"><img
-                                src="img/trash-2.svg"></button> </label></div>
-                    </div>
-
-                    <div class="list">
-                        <label class="item">
-                            <input type="checkbox">
-                            <div class="text">Comprar um notebook<button class="edit" onclick="showModalEdit()"><img
-                                    src="img/edit-2.svg"></button> <button class="trash" onclick="showModalDel()"><img
-                                    src="img/trash-2.svg"></button> </label></div>
-                        </div>
+            <div class="list" id="todoList">
+                <label class="todoItem">
+                    
+            </div>
 
             <div class="modal" id="modal-edit">
                 <div class="modal-content">
                     <img onclick="hideModalEdit()" class="exit" src="img/exitIcon.svg"><br>
-                    <input class="input-modal" type="text" placeholder="Digite o novo nome da tarefa">
-                    <button onclick="funcEdit()" class="button-modal">Salvar</button>
+                    <input class="input-modal" id="input-edit" type="text" placeholder="Digite o novo nome da tarefa">
+                    <button onclick="hideModalEdit()" class="button-modal">Salvar</button>
                 </div>
             </div>
 
             <div class="modal" id="modal-del">
                 <div class="modal-content">
                     <img onclick="hideModalDel()" class="exit" src="img/exitIcon.svg"><br>
-                    <div id="mensagem-de-delete">Tem certeza que deseja excluir a tarefa: Nome da tarefa?</div>
-                    <button onclick="funcDel()" class="button-modal">Excluir</button>
+                    <div id="mensagem-de-delete">Tem certeza que deseja excluir a tarefa?</div>
+                    <button onclick="hideModalDel()" class="button-modal">Excluir</button>
                 </div>
             </div>
 
@@ -67,8 +48,8 @@
             <div class="modal" id="modal-criar">
                 <div class="modal-content">
                     <img onclick="hideModalCriar()" class="exit" src="img/exitIcon.svg"><br>
-                    <input class="input-modal" type="text" placeholder="Digite a nova tarefa">
-                    <button onclick="funcCriar()" class="button-modal">Criar Tarefa</button>
+                    <input class="input-modal" id="input-add" type="text" placeholder="Digite a nova tarefa">
+                    <button id="botao-criar" class="button-modal">Criar Tarefa</button>
                 </div>
             </div>
         </div>

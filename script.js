@@ -1,11 +1,43 @@
+var tarefa;
+
+let botaoCriar = document.querySelector("#botao-criar");
+
+    botaoCriar.onclick = function() {
+    tarefa = document.querySelector("#input-add").value;
+    hideModalCriar();
+    funcCriar(tarefa);
+}
+
 function showModalCriar() {
     let element = document.querySelector("#modal-criar");
     element.classList.add("show-modal");
+    
 }
 
 function hideModalCriar() {
     let element = document.querySelector("#modal-criar");
     element.classList.remove("show-modal");
+}
+
+function funcCriar(tarefa){
+
+    if(tarefa != ""){
+
+        const item = document.createElement("label");
+        item.classList.add('todoItem');
+        item.innerHTML = `
+        <input type="checkbox">
+        <div class="text">${tarefa}<button class="edit" onclick="showModalEdit()"><img
+        src="img/edit-2.svg"></button> <button class="trash" onclick="showModalDel()"><img
+        src="img/trash-2.svg"></button> </div></label>
+        `;
+        document.getElementById('todoList').appendChild(item);
+    }
+
+    else{
+        alert("Digite o nome da tarefa");
+    }
+
 }
 
 function showModalEdit() {
@@ -28,14 +60,4 @@ function hideModalDel() {
     element.classList.remove("show-modal");
 }
 
-function funcCriar(){
-    let tarefa = prompt("Digite a nova tarefa:");
-}
 
-function funcDel(){
-    let apagar = confirm("Realmente deseja apagar?");
-}
-
-function funcEdit(){
-    let editar = prompt("Digite o novo nome da tarefa:");
-}
