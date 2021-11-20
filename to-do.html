@@ -22,18 +22,41 @@
             </div>
 
             <ul class="list">
-                <li>Comprar um notebook gamer <button class="edit" onclick="funcEdit()"><img
-                            src="img/edit-2.svg"></button> <button class="trash" onclick="funcDel()"><img
+                <li>Comprar um notebook gamer <button class="edit" onclick="showModalEdit()"><img
+                            src="img/edit-2.svg"></button> <button class="trash" onclick="showModalDel()"><img
                             src="img/trash-2.svg"></button> </li>
-                <li>Criar um vídeo para o youtube <button class="edit" onclick="funcEdit()"><img
-                            src="img/edit-2.svg"></button> <button class="trash" onclick="funcDel()"><img
+                <li>Criar um vídeo para o youtube <button class="edit" onclick="showModalEdit()"><img
+                            src="img/edit-2.svg"></button> <button class="trash" onclick="showModalDel()"><img
                             src="img/trash-2.svg"></button> </li>
-                <li>Criar meu portfolio <button class="edit" onclick="funcEdit()"><img src="img/edit-2.svg"></button>
-                    <button class="trash" onclick="funcDel()"><img src="img/trash-2.svg"></button> </li>
+                <li>Criar meu portfolio <button class="edit" onclick="showModalEdit()"><img src="img/edit-2.svg"></button>
+                    <button class="trash" onclick="showModalDel()"><img src="img/trash-2.svg"></button> </li>
             </ul>
 
+            <div class="modal" id="modal-edit">
+                <div class="modal-content">
+                    <img onclick="hideModalEdit()" class="exit" src="img/exitIcon.svg"><br>
+                    <input class="input-modal" type="text" placeholder="Digite o novo nome da tarefa">
+                    <button onclick="funcEdit()" class="button-modal">Salvar</button>
+                </div>
+            </div>
+
+            <div class="modal" id="modal-del">
+                <div class="modal-content">
+                    <img onclick="hideModalDel()" class="exit" src="img/exitIcon.svg"><br>
+                    <div id="mensagem-de-delete">Tem certeza que deseja excluir a tarefa: Nome da tarefa?</div>
+                    <button onclick="funcDel()" class="button-modal">Excluir</button>
+                </div>
+            </div>
+
             <div class="footer">
-                <button onclick="funcCriar()"><img src="img/plus-circle.svg"></button>
+                <button onclick="showModalCriar()"><img src="img/plus-circle.svg"></button>
+            </div>
+            <div class="modal" id="modal-criar">
+                <div class="modal-content">
+                    <img onclick="hideModalCriar()" class="exit" src="img/exitIcon.svg"><br>
+                    <input class="input-modal" type="text" placeholder="Digite a nova tarefa">
+                    <button onclick="funcCriar()" class="button-modal">Criar Tarefa</button>
+                </div>
             </div>
         </div>
 
