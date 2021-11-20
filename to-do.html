@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarefas</title>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
+
 <body class="content">
     <main>
         <h1>Loopis To-Do</h1><br>
-        <a href="index.html"><p>Voltar</p></a>
+        <a href="index.html">
+            <p>Voltar</p>
+        </a>
         <div class="main-to-do">
             <div class="search-box">
                 <input class="input" type="text" placeholder="Pesquise sua anotação">
                 <img src="img/searchIcon.png">
-            </div> 
-        
-                <ul class="list">
-                    <li>Comprar um notebook gamer <span> <i  class="fas fa-edit"></i> <i class="fas fa-trash"></i></span></li>
-                    <li>Criar um vídeo para o youtube <span> <i  class="fas fa-edit"></i> <i class="fas fa-trash"></i></span></li>
-                    <li>Criar meu portfolio <span> <i class="fas fa-edit"></i> <i class="fas fa-trash"></i></span></li>
-                </ul>   
-            
+            </div>
+
+            <ul class="list">
+                <li>Comprar um notebook gamer <button class="edit" onclick="funcEdit()"><img
+                            src="img/edit-2.svg"></button> <button class="trash" onclick="funcDel()"><img
+                            src="img/trash-2.svg"></button> </li>
+                <li>Criar um vídeo para o youtube <button class="edit" onclick="funcEdit()"><img
+                            src="img/edit-2.svg"></button> <button class="trash" onclick="funcDel()"><img
+                            src="img/trash-2.svg"></button> </li>
+                <li>Criar meu portfolio <button class="edit" onclick="funcEdit()"><img src="img/edit-2.svg"></button>
+                    <button class="trash" onclick="funcDel()"><img src="img/trash-2.svg"></button> </li>
+            </ul>
+
             <div class="footer">
-                <button onclick="funcCriar()"><img src="img/circle-plus.svg"></button>
+                <button onclick="funcCriar()"><img src="img/plus-circle.svg"></button>
             </div>
         </div>
-       
+
     </main>
 </body>
 <script src="script.js"></script>
+
 </html>

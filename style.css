@@ -132,11 +132,23 @@ body {
     border-radius: 10px;
 }
 
-.list li span{
+
+.edit{
+    position: absolute;
+    right: 30px;
+    width: 35px;
+    top: 10px;
+    text-align: center;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    padding-right: 0.5em;
+}
+
+.trash {
+    top: 10px;
     position: absolute;
     right: 0px;
-    color: rgb(199, 41, 41);
-    width: 45px;
+    width: 35px;
     text-align: center;
     border-radius: 0 3px 3px 0;
     cursor: pointer;
@@ -157,8 +169,4 @@ body {
 
 .footer img {
     width: 35px;
-}
-
-.fa-edit {
-    color: black;
 }
