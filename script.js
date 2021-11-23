@@ -4,6 +4,23 @@ let indice;
 let elemento;
 
 
+function inputBox(){
+    var search, filtro, todoList, menuItens, links;
+    search = document.getElementById("input");
+    filtro = search.value.toUpperCase();
+    todoList = document.getElementById("todoList");
+    menuItens = todoList.getElementsByTagName("li");
+    for(var i=0; i<menuItens.length; i++){
+        links = menuItens[i].getElementsByTagName("a")[0];
+        if(links.innerHTML.toUpperCase().indexOf(filtro)>-1){
+            menuItens[i].style.display = "block";
+        }else{
+            menuItens[i].style.display = "none";
+        }
+    }
+}
+
+
 let botaoCriar = document.querySelector("#botao-criar");
 
 botaoCriar.onclick = function() {
@@ -16,14 +33,14 @@ function funcCriar(tarefa){
     if(tarefa != ""){
         indice = "tarefa" + indiceNumero;
 
-        const item = document.createElement("label");
+        const item = document.createElement("li");
         item.classList.add("todoItem");
         item.classList.add(indice);
         item.innerHTML = `
         <input type="checkbox">
-        <div class="text">${tarefa}<button class="edit" ><img
+        <a href="#">${tarefa}</a><button class="edit" ><img
         src="img/edit-2.svg" onclick="showModalEdit()" class="${indice}"></button> <button class="trash"><img
-        src="img/trash-2.svg" onclick="showModalDel()" class="${indice}"></button></div>
+        src="img/trash-2.svg" onclick="showModalDel()" class="${indice}"></button>
         `;
 
         document.getElementById('todoList').appendChild(item);
