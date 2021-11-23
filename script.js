@@ -3,13 +3,11 @@ let indiceNumero = 0;
 let indice;
 let elemento;
 
-let banco = [];
 
 let botaoCriar = document.querySelector("#botao-criar");
 
 botaoCriar.onclick = function() {
     tarefa = document.querySelector("#input-add").value;
-    document.querySelector("#input-add").value = "";
     funcCriar(tarefa);
 }
 
@@ -25,9 +23,8 @@ function funcCriar(tarefa){
         <input type="checkbox">
         <div class="text">${tarefa}<button class="edit" ><img
         src="img/edit-2.svg" onclick="showModalEdit()" class="${indice}"></button> <button class="trash"><img
-        src="img/trash-2.svg" onclick="showModalDel()" class="${indice}"></button> </div></label>
+        src="img/trash-2.svg" onclick="showModalDel()" class="${indice}"></button></div>
         `;
-        banco.push({'tarefa': indice});
 
         document.getElementById('todoList').appendChild(item);
         hideModalCriar();
@@ -38,7 +35,6 @@ function funcCriar(tarefa){
         alert("Digite o nome da tarefa");
     }
 }
-
 
 function clickItem(evento) {
     elemento = evento.target.getAttribute("class");
@@ -70,35 +66,38 @@ botaoEdit.onclick = function() {
 function funcEdit() {
     let novoNome = document.querySelector("#input-edit").value;
     console.log(novoNome);
+    funcDel();
+    funcCriar(novoNome);
 }
 
 function showModalCriar() {
-    let element = document.querySelector("#modal-criar");
-    element.classList.add("show-modal");
-}
-
-function hideModalCriar() {
-    let element = document.querySelector("#modal-criar");
-    element.classList.remove("show-modal");
+    let modal = document.querySelector("#modal-criar");
+    modal.classList.add("show-modal");
     document.querySelector("#input-add").value = "";
 }
 
+function hideModalCriar() {
+    let modal = document.querySelector("#modal-criar");
+    modal.classList.remove("show-modal");
+}
+
 function showModalEdit() {
-    let element = document.querySelector("#modal-edit");
-    element.classList.add("show-modal");
+    let modal = document.querySelector("#modal-edit");
+    modal.classList.add("show-modal");
+    document.querySelector("#input-edit").value = "";
 }
 
 function hideModalEdit() {
-    let element = document.querySelector("#modal-edit");
-    element.classList.remove("show-modal");
+    let modal = document.querySelector("#modal-edit");
+    modal.classList.remove("show-modal");
 }
 
 function showModalDel() {
-    let element = document.querySelector("#modal-del");
-    element.classList.add("show-modal");
+    let modal = document.querySelector("#modal-del");
+    modal.classList.add("show-modal");
 }
 
 function hideModalDel() {
-    let element = document.querySelector("#modal-del");
-    element.classList.remove("show-modal");
+    let modal = document.querySelector("#modal-del");
+    modal.classList.remove("show-modal");
 }
