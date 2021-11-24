@@ -89,7 +89,7 @@ body {
 .content h1 {
     text-align: center;
     color: white;
-    text-shadow: 1px 3px rgb(81, 54, 102) ;
+    text-shadow: 1px 3px rgb(81, 54, 102);
     font-size: 50px;
 }
 
@@ -131,7 +131,7 @@ body {
     background: #f2f2f2;
     padding: 0 15px;
     border-radius: 10px;
-    margin: 5px;
+    margin: 10px 5px;
     list-style: none;
 }
 
@@ -189,7 +189,6 @@ body {
     justify-content: end;
     margin-right: 2.5px;
     margin-top: 20px;
-
 }
 
 .footer button {
@@ -200,7 +199,6 @@ body {
 .footer img {
     width: 35px;
 }
-
 
 .modal {
     position: fixed;

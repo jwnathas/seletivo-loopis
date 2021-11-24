@@ -3,9 +3,10 @@ let indiceNumero = 0;
 let indice;
 let elemento;
 
+let array=[];
 
 function inputBox(){
-    var search, filtro, todoList, menuItens, links;
+    let search, filtro, todoList, menuItens, links;
     search = document.getElementById("input");
     filtro = search.value.toUpperCase();
     todoList = document.getElementById("todoList");
@@ -19,7 +20,6 @@ function inputBox(){
         }
     }
 }
-
 
 let botaoCriar = document.querySelector("#botao-criar");
 
@@ -43,7 +43,10 @@ function funcCriar(tarefa){
         src="img/trash-2.svg" onclick="showModalDel()" class="${indice}"></button>
         `;
 
-        document.getElementById('todoList').appendChild(item);
+        array.push(tarefa);
+        let k = array.sort().indexOf(tarefa);
+        let parentElement = document.getElementById('todoList');
+        parentElement.insertBefore(item, parentElement.children[k]);
         hideModalCriar();
         indiceNumero++;
     }
